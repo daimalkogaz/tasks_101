@@ -7,6 +7,8 @@ search_string = "daemon exited with code 1"
 # then we initiate a for and if loop to help us out pinpoint the exact locations of the string we need and print that guy out
 # I also had to use ISO-8859-1 encoding because of some characters in the logs causing an error when launching the script
 
+print("=====================================================\nTHE APP SHUT DOWN UNEXPECTEDLY:\n=====================================================")
+
 with open("Lucid.log", encoding="ISO-8859-1") as log1, open("app.log", encoding="ISO-8859-1") as log2:
 	for line in log1:
 		if search_string in line:
